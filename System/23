@@ -1,0 +1,2 @@
+graphic type username and password
+SSH ssh -p 4242 user@localhost
