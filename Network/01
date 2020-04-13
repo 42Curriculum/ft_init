@@ -1,1 +1,1 @@
-ifconfig -a | awk '{print $1}'
+basename -a /sys/class/net/*
