@@ -1,0 +1,3 @@
+#might change, run command below
+traceroute slash16.org | grep nat 
+10.90.1.11

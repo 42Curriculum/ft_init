@@ -1,1 +1,2 @@
-http://wej.mah.42.us.org/
+#run this ifconfig en0 | grep "inet " | awk '{print $2}' | nslookup |grep name | sed 's/.*name = //'
+e1z1r2p1.42.us.org

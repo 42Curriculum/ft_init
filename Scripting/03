@@ -1,0 +1,18 @@
+f ((0 == $#));then
+        echo "usage command.sh user_name"       
+elif (($# ==1));then
+        for i in $(ps -aux | grep -i "^$1" | awk '{print $2}');
+        do
+                kill -9 $1
+        done
+        sudo userdel $1
+elif (($# >1));then
+        for arg in $@
+                for i in $(ps -aux | grep -i  "^$arg" | awk '{print $2}'); 
+        	do
+                        kill -9 $i
+                done
+        do
+                sudo userdel $arg
+        done
+fi
